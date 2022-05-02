@@ -26,18 +26,18 @@ class Queue {
 
   enqueue(value) {
     if (this.queue) {
-      let current  = this.queue;
-      while (current .next) {
-        current  = current .next;
+      let current = this.queue;
+      while (current.next) {
+        current = current.next;
       }
-      current .next = new ListNode(value);
+      current.next = new ListNode(value);
     } else this.queue = new ListNode(value);
   }
 
   dequeue() {
     if (this.queue) {
-      const result  = this.queue;
-      this.queue = result .next;
+      const result = this.queue;
+      this.queue = result.next;
       return result.value;
     }
     return null;
